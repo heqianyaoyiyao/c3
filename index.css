@@ -1,0 +1,139 @@
+/*
+* @Author: hyx
+* @Date:   2017-03-11 21:53:23
+* @Last Modified by:   hyx
+* @Last Modified time: 2017-03-11 21:53:47
+*/
+*{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 400px auto;
+            box-sizing: border-box;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(30deg) rotateY(-30deg);
+            animation: move 4s 6s linear infinite;
+        }
+        div>span{
+            display: block;
+            width: 200px;
+            height:200px;
+            /*background-color: red;*/
+            position: absolute;
+            /*transition: all 1s;*/
+            opacity: 0.5;
+        }
+        div span:nth-child(1){
+            transform: translate(300px,300px) rotate(30deg);
+            background-color: red;
+            animation: move1 1s  forwards;
+        }
+        div span:nth-child(2){
+            transform: translate(-100px,200px) rotate(60deg);
+            background-color: orange;
+            animation: move2 1s 1s forwards;
+        }
+        div span:nth-child(3){
+            transform: translate(600px,-200px) rotate(23deg);
+            background-color: yellow;
+            animation: move3 1s 2s forwards;
+        }
+        div span:nth-child(4){
+            transform: translate(-300px,-300px) rotate(230deg);
+            background-color: green;
+            animation: move4 1s 3s forwards;
+        }
+        div span:nth-child(5){
+            transform: translate(-300px,80px) rotate(150deg);
+            background-color: greenyellow;
+            animation: move5 1s 4s forwards;
+        }
+        div span:nth-child(6){
+            transform: translate(450px,200px) rotate(100deg);
+            background-color: blue;
+            animation: move6 1s 5s forwards;
+        }
+        /*top*/
+        @keyframes move1 {
+            0%{
+
+            }
+            50%{
+                transform: translateX(0px) rotate(0deg);
+            }
+            100%{
+                transform: translateY(-100px) rotateX(90deg);
+            }
+        }
+        /*left*/
+        @keyframes move2 {
+            0%{
+
+            }
+            50%{
+                transform: translateX(0px) rotate(0deg);
+            }
+            100%{
+                transform: translateX(-100px) rotateY(-90deg);
+            }
+        }
+        /*back*/
+        @keyframes move3 {
+            0%{
+
+            }
+            50%{
+                transform: translateX(0px) rotate(0deg);
+            }
+            100%{
+                transform: translateZ(-100px);
+            }
+        }
+        /*font*/
+        @keyframes move4 {
+            0%{
+
+            }
+            50%{
+                transform: translateX(0px) rotate(0deg);
+            }
+            100%{
+                transform: translateZ(100px);
+            }
+        }
+        /*bottom*/
+        @keyframes move5 {
+            0%{
+
+            }
+            50%{
+                transform: translateX(0px) rotate(0deg);
+            }
+            100%{
+                transform: translateY(100px) rotateX(-90deg);
+            }
+        }
+        /*right  */
+        @keyframes move6 {
+            0%{
+
+            }
+            50%{
+                transform: translateX(0px) rotate(0deg);
+            }
+            100%{
+                transform: translateX(100px) rotateY(-90deg);
+            }
+        }
+        @keyframes move {
+            from{
+                transform: rotate3d(1,0,1,0deg);
+            }
+            to{
+                transform: rotate3d(1,0,1,360deg);
+            }
+        }
