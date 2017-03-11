@@ -2,7 +2,7 @@
 * @Author: hyx
 * @Date:   2017-03-11 21:53:23
 * @Last Modified by:   hyx
-* @Last Modified time: 2017-03-11 21:53:47
+* @Last Modified time: 2017-03-11 22:02:43
 */
 *{
             padding: 0;
@@ -129,11 +129,11 @@
                 transform: translateX(100px) rotateY(-90deg);
             }
         }
-        @keyframes move {
+        /* @keyframes move {
             from{
                 transform: rotate3d(1,0,1,0deg);
             }
             to{
                 transform: rotate3d(1,0,1,360deg);
             }
-        }
+        } */
